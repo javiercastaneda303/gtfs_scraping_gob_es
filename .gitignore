@@ -1,0 +1,4 @@
+node_modules
+.env
+explore*.js
+blocked.png

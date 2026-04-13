@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:nap.transportes.gob.es)",
+      "Bash(npm init:*)",
+      "Bash(npm install:*)",
+      "Bash(npx playwright:*)",
+      "Bash(node explore.js)",
+      "Bash(node explore2.js)",
+      "Bash(node explore3.js)"
+    ]
+  }
+}
