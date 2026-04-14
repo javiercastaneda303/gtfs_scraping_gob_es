@@ -4,6 +4,21 @@ require("dotenv").config();
 
 const BASE_URL = "https://nap.transportes.gob.es";
 
+// --- Logging helpers ---
+const t0 = Date.now();
+function elapsed() {
+  const s = (Date.now() - t0) / 1000;
+  const mm = String(Math.floor(s / 60)).padStart(2, "0");
+  const ss = String(Math.floor(s % 60)).padStart(2, "0");
+  return `${mm}:${ss}`;
+}
+function log(msg) {
+  console.log(`[${elapsed()}] ${msg}`);
+}
+function logStep(msg) {
+  console.log(`\n[${elapsed()}] ========== ${msg} ==========`);
+}
+
 // --- Mongoose Schema ---
 const datasetSchema = new mongoose.Schema(
   {
@@ -22,6 +37,8 @@ const datasetSchema = new mongoose.Schema(
     formatos: [String],
     tipoTransporte: [String],
     ultimaActualizacion: String,
+    metadatoId: String,
+    metadatos: { type: mongoose.Schema.Types.Mixed, default: {} },
   },
   { timestamps: true }
 );
@@ -54,13 +71,13 @@ async function createBrowser() {
 async function collectDetailUrls(page) {
   const allUrls = [];
 
+  log(`Abriendo listado: ${BASE_URL}/Files/List`);
   await page.goto(`${BASE_URL}/Files/List`, {
     waitUntil: "domcontentloaded",
     timeout: 60000,
   });
   await page.waitForTimeout(4000);
 
-  // Get total pages from pagination
   const totalPages = await page.evaluate(() => {
     const pageButtons = document.querySelectorAll(".pagination .page-link");
     let max = 1;
@@ -71,16 +88,14 @@ async function collectDetailUrls(page) {
     return max;
   });
 
-  console.log(`Total pages found: ${totalPages}`);
+  log(`Paginación detectada: ${totalPages} páginas`);
 
   for (let pageNum = 1; pageNum <= totalPages; pageNum++) {
-    console.log(`Scraping list page ${pageNum}/${totalPages}...`);
+    log(`→ Recorriendo listado página ${pageNum}/${totalPages}`);
 
     if (pageNum > 1) {
-      // Navigate to the next page by submitting the form with the page number
       await page.evaluate((p) => {
         document.querySelector("#page").value = p;
-        // Find and submit the form containing the pagination
         const form =
           document.querySelector("#page").closest("form") ||
           document.querySelector("form");
@@ -105,10 +120,10 @@ async function collectDetailUrls(page) {
     }, BASE_URL);
 
     allUrls.push(...urls);
-    console.log(`  Found ${urls.length} items on page ${pageNum}`);
+    log(`   ${urls.length} items en esta página (acumulado: ${allUrls.length})`);
   }
 
-  console.log(`\nTotal detail URLs collected: ${allUrls.length}`);
+  log(`Total URLs de detalle recolectadas: ${allUrls.length}`);
   return allUrls;
 }
 
@@ -231,6 +246,49 @@ async function scrapeDetailPage(page, url, datasetId) {
       ? updateEl.textContent.trim().replace("Actualizado el ", "")
       : "";
 
+    // Metadatos - botón "Ver metadatos" + modal #modal-metadatos-{metadatoId}
+    result.metadatoId = "";
+    result.metadatos = {};
+    const metaBtn = document.querySelector("button.b-metadata, [onclick^='showMetadato']");
+    if (metaBtn) {
+      const onclick = metaBtn.getAttribute("onclick") || "";
+      const target = metaBtn.getAttribute("data-target") || "";
+      const idMatch =
+        onclick.match(/showMetadato\(['"]?(\d+)['"]?\)/) ||
+        target.match(/modal-metadatos-(\d+)/);
+      if (idMatch) result.metadatoId = idMatch[1];
+    }
+
+    if (result.metadatoId) {
+      const modal = document.querySelector(
+        `#modal-metadatos-${result.metadatoId}`
+      );
+      if (modal) {
+        const cards = modal.querySelectorAll(".card.divMetadatosCard");
+        for (const card of cards) {
+          const titleEl = card.querySelector(
+            ".divMetadatosTitle .align-middle.font-weight-bold"
+          );
+          const sectionTitle = titleEl?.textContent?.trim() || "Sin título";
+          const rows = card.querySelectorAll("table tbody tr");
+          const section = {};
+          for (const tr of rows) {
+            const tds = tr.querySelectorAll("td");
+            if (tds.length < 2) continue;
+            const key = tds[0].textContent.trim();
+            const link = tds[1].querySelector("a");
+            const value = link
+              ? link.getAttribute("href") || link.textContent.trim()
+              : tds[1].textContent.trim().replace(/\s+/g, " ");
+            if (key) section[key] = value;
+          }
+          if (Object.keys(section).length) {
+            result.metadatos[sectionTitle] = section;
+          }
+        }
+      }
+    }
+
     return result;
   }, BASE_URL);
 
@@ -243,19 +301,25 @@ async function scrapeDetailPage(page, url, datasetId) {
 
 // --- Main ---
 async function main() {
-  // Connect to MongoDB
-  await mongoose.connect(process.env.MONGO_URI);
-  console.log("Connected to MongoDB");
+  logStep("INICIO DEL SCRAPER");
+  log(`MONGO_URI: ${process.env.MONGO_URI ? "definida" : "NO definida"}`);
 
+  log("Conectando a MongoDB...");
+  await mongoose.connect(process.env.MONGO_URI);
+  log("✓ Conectado a MongoDB");
+
+  log("Lanzando navegador Chromium...");
   const { browser, context } = await createBrowser();
   const page = await context.newPage();
+  log("✓ Navegador listo");
+
+  const stats = { scraped: 0, skipped: 0, errors: 0 };
 
   try {
-    // Step 1: Collect all URLs
-    console.log("\n=== Step 1: Collecting detail URLs ===\n");
+    logStep("PASO 1/2: Recolectando URLs del listado");
     const detailUrls = await collectDetailUrls(page);
 
-    // Save URLs to MongoDB
+    log("Guardando URLs en MongoDB (upsert)...");
     for (const { id, url } of detailUrls) {
       await Dataset.findOneAndUpdate(
         { datasetId: id },
@@ -263,25 +327,24 @@ async function main() {
         { upsert: true }
       );
     }
-    console.log(`Saved ${detailUrls.length} URLs to MongoDB`);
+    log(`✓ ${detailUrls.length} URLs persistidas`);
 
-    // Step 2: Scrape each detail page
-    console.log("\n=== Step 2: Scraping detail pages ===\n");
-    for (let i = 0; i < detailUrls.length; i++) {
+    logStep("PASO 2/2: Scrapeando páginas de detalle");
+    const total = detailUrls.length;
+
+    for (let i = 0; i < total; i++) {
       const { id, url } = detailUrls[i];
+      const idx = `[${i + 1}/${total}]`;
 
-      // Check if already fully scraped
       const existing = await Dataset.findOne({ datasetId: id });
-      if (existing?.titulo) {
-        console.log(
-          `[${i + 1}/${detailUrls.length}] Skipping ${id} (already scraped)`
-        );
+      if (existing?.titulo && existing?.metadatoId) {
+        stats.skipped++;
+        log(`${idx} ⏭  id=${id} ya scrapeado, omitiendo`);
         continue;
       }
 
-      console.log(
-        `[${i + 1}/${detailUrls.length}] Scraping detail: ${url}`
-      );
+      log(`${idx} ▶  Scrapeando id=${id}  ${url}`);
+      const start = Date.now();
 
       try {
         const data = await scrapeDetailPage(page, url, id);
@@ -290,23 +353,37 @@ async function main() {
           upsert: true,
         });
 
-        console.log(`  -> ${data.titulo}`);
-        console.log(`     Ubicaciones: ${data.ubicaciones.join(", ")}`);
-        console.log(`     Operadores: ${data.operadores.map((o) => o.nombre).join(", ")}`);
-        console.log(`     Descarga: ${data.descargaUrl}`);
+        const ms = Date.now() - start;
+        const metaSections = Object.keys(data.metadatos || {}).length;
+        stats.scraped++;
+        log(`${idx} ✓  "${data.titulo}" (${ms}ms)`);
+        log(
+          `        ubicaciones=${data.ubicaciones.length} operadores=${data.operadores.length} formatos=[${data.formatos.join(", ")}] metadatoId=${data.metadatoId || "-"} secciones=${metaSections}`
+        );
       } catch (err) {
-        console.error(`  Error scraping ${url}: ${err.message}`);
+        stats.errors++;
+        log(`${idx} ✗  Error en id=${id}: ${err.message}`);
       }
 
-      // Small delay between requests
+      if ((i + 1) % 10 === 0) {
+        log(
+          `   · Progreso: ${i + 1}/${total} | scraped=${stats.scraped} skipped=${stats.skipped} errors=${stats.errors}`
+        );
+      }
+
       await page.waitForTimeout(1500);
     }
 
-    console.log("\n=== Scraping complete ===");
+    logStep("SCRAPING COMPLETADO");
+    log(
+      `Resumen: scraped=${stats.scraped} skipped=${stats.skipped} errors=${stats.errors} total=${total}`
+    );
   } finally {
+    log("Cerrando navegador...");
     await browser.close();
+    log("Desconectando de MongoDB...");
     await mongoose.disconnect();
-    console.log("Disconnected from MongoDB");
+    log(`✓ Finalizado en ${elapsed()}`);
   }
 }
 

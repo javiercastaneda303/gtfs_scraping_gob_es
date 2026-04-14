@@ -1,0 +1,625 @@
+<!DOCTYPE html><html lang="es"><head><meta http-equiv="origin-trial" content="A7vZI3v+Gz7JfuRolKNM4Aff6zaGuT7X0mf3wtoZTnKv6497cVMnhy03KDqX7kBz/q/iidW7srW31oQbBt4VhgoAAACUeyJvcmlnaW4iOiJodHRwczovL3d3dy5nb29nbGUuY29tOjQ0MyIsImZlYXR1cmUiOiJEaXNhYmxlVGhpcmRQYXJ0eVN0b3JhZ2VQYXJ0aXRpb25pbmczIiwiZXhwaXJ5IjoxNzU3OTgwODAwLCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ==">
+	<!-- Google Tag Manager -->
+	<script async="" src="https://scripts.clarity.ms/0.8.59/clarity.js"></script><script async="" src="https://www.clarity.ms/tag/j6b0ph194c?ref=gtm2"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-PXWS1QZXF2&amp;cx=c&amp;gtm=4e64a1&amp;bs=ctrl2"></script><script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/gTpTIWhbKpxADzTzkcabhXN4/recaptcha__es.js" crossorigin="anonymous" integrity="sha384-fP3JpO1tWgC6suGUnDcyaXgMPTGIUV3sClGD9U5ceipNYNmwCpoP4+hi0gtHlZaG"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-5PP6ZP7"></script><script>
+		(function (w, d, s, l, i) {
+			w[l] = w[l] || []; w[l].push({
+				'gtm.start':
+					new Date().getTime(), event: 'gtm.js'
+			}); var f = d.getElementsByTagName(s)[0],
+				j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+					'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+		})(window, document, 'script', 'dataLayer', 'GTM-5PP6ZP7');</script>
+	<!-- End Google Tag Manager -->
+	<script type="text/javascript">
+		var baseUrlMapa = 'https://nap-map.transportes.gob.es/map';
+	</script>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8">
+	<link rel="shortcut icon" type="image/ico" href="/images/favicon.ico">
+	
+    <title>Ficheros | NAP</title>
+    <meta name="description" content="Muestra detalles de ficheros; comunidad, medio de transporte, tipo de transporte, agencias incluidas, número de viajes, número de rutas, número de paradas... Así como diferentes formatos de descarga. ">
+    <meta name="keywords" content="NAP, PAN, transporte, portal de datos, MITMA, ministerio, Fomento, Detalle, GTFS, NeTEx, descargar, mapa, viajes, rutas, paradas, bus, coche, tren ">
+    <meta name="author" content="Mitma">
+    <meta name="copyright" content="Mitma 2020">
+
+
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="/css/main.css?v=rA_hlSqUFNZsQoMjPF2EFtc-U-jjRsk6AJytIK_eZn4">
+	<link rel="stylesheet" href="/css/backend.css?v=yWEnn9lwQ5e3l8XwNpQyEiaJbP8w6TH-RAI0gBQYxZ8">
+
+	<script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+	<script src="https://www.google.com/recaptcha/api.js"></script>
+
+
+	<script src="/js/main.js?v=En65lNJA-2RbAx4xVlxfjjQBFeO-aLUHbIbbKOh1d4M"></script>
+</head>
+
+<body>
+	<!-- Google Tag Manager (noscript)
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5PP6ZP7"
+	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	<!-- End Google Tag Manager (noscript) -->
+	<div id="page-container">
+		<header role="banner">
+			<nav class="navbar navbar-expand-lg navbar-light d-md-none flex-column" style="background-color: #f2f3f3; ">
+				<div class="d-flex flex-column w-100">
+
+						<div class="d-flex justify-content-between align-items-center">
+							<button class="navbar-toggler btn-cabecera-responsive" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+								<div class="icono-animado"><span></span><span></span><span></span></div>
+							</button>
+
+							<div>
+								<img class="logo" src="/images/Logotipo_del_Ministerio_de_Transportes_y_Movilidad_Sostenible.svg" alt="Gobieno de España / Ministerio de Transportes y Movilidad Sostenible">
+								<img class="icono-Nap" src="/images/logonap.svg" alt="NAP Tranporte Multimodal">
+							</div>
+
+							<div class="content-menu d-flex">
+								<a class="nav-link item-nav-login d-flex flex-column" href="/Account/Login">
+									<span class="fa fa-sign-in fa-3x"></span>
+									<span class="d-none d-sm-block">Identificarse</span>
+								</a>
+							</div>
+						</div>
+						<div class="collapse navbar-collapse text-left" id="navbarNavAltMarkup">
+							<div class="navbar-nav">
+								<a class="nav-item nav-link active" href="/"><span class="fa fa-home fa-lg" aria-hidden="true" style="margin-right: 5px;"></span> Home <span class="sr-only">(current)</span></a>
+								<a class="nav-item nav-link" href="/Account/Login"><span class="fa fa-sign-in fa-lg mr-1" aria-hidden="true"></span> Identificarse</a>
+								<a class="nav-item nav-link" href="/Account/SignIn"><span class="fa fa-pencil-square-o fa-lg" aria-hidden="true" style="margin-right: 5px;"></span> Registrarse</a>
+							</div>
+						</div>
+				</div>
+			</nav>
+			<div class="container d-none d-md-block">
+				<div class="row">
+					<!-- Header con el logo junto -->
+					<!-- <div class="col-sm-7 container-logo">
+					  <a href="">
+						<img class="logo" src="images/mitma-v1.png" alt="logotipo del ministerio y  NAP">
+					  </a>
+					</div> -->
+					<!-- header con el logo separado -->
+					<div class="col-sm-7 container-logo">
+						<a href="https://www.transportes.gob.es/">
+							<img class="logo" src="/images/Logotipo_del_Ministerio_de_Transportes_y_Movilidad_Sostenible.svg" alt="Gobieno de España / Ministerio de Transportes y Movilidad Sostenible">
+						</a>
+						<a href="/">
+							<img class="icono-Nap" src="/images/logonap.svg" alt="NAP Tranporte Multimodal">
+						</a>
+					</div>
+
+						<!-- cuando estas sin registrar -->
+						<div class="col-sm-5 list-nav">
+							<ul class="nav justify-content-center nav-pills" role="menubar">
+								<li class="nav-item " role="menuitem">
+									<a class="nav-link item-nav identificate" href="/Account/Login">
+										<i class="fa fa-sign-in" aria-hidden="true"></i>
+										Identificarse
+									</a>
+								</li>
+							</ul>
+						</div>
+				</div>
+			</div>
+			<div class="banda-color"></div>
+		</header>
+		<main role="main">
+			
+
+
+
+<main>
+    <div class="container">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb container-breadcrumb">
+                <li class="breadcrumb-item"><a href="/">Home</a></li>
+                <li class="breadcrumb-item"><a href="/Files/List">Listado</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Ficheros</li>
+            </ol>
+        </nav>
+        <div class="row">
+            <div class="col-12 mt-3">
+                <div class="detalles-fichero card">
+                    <div class="card-header text-left container-Blue card-title ">
+                        Lurraldebus Ekialdebus
+                    </div>
+                    <div class="d-flex map">
+                        <div class="col-sm-12 col-md-12 col-lg-6 pb-3">
+                            <div class="d-block d-sm-flex ">
+                                <div class="img-square-wrapper">
+                                    <img class="" src="data:image/png;base64,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" alt="">
+                                </div>
+                                <div class="card-info d-flex flex-column align-items-start pb-0">
+                                    <p class="text-left">
+                                        <span class="nombre-organizacion font-weight-bold text-dark">Ekialdebus</span>
+                                    </p>
+                                    <p class="text-left">
+                                            <span class="badge badge-info pb-2 ml-0">Autobús</span>
+                                    </p>
+                                    <p class="text-left">
+                                            <span class="fa fa-map-marker fa-lg" aria-hidden="true"></span>
+                                            <span>Guipúzcoa</span>
+                                    </p>
+
+                                </div>
+                            </div>
+                            <div class="card-footer card-descripcion text-left m-0 p-2">
+                                <p style="white-space: pre-line">Servicios regulares de autobús de Ekialdebus</p>
+                            </div>
+
+<div class="card-footer card-descripcion bg-white text-left">
+
+    <p><b>Operadores incluidos</b></p>
+
+    <ul class="mb-0">
+                <li>
+                        <a href="https://ekialdebus.eus/" target="_blank">Lur-e-01_ekialdebus S.l.</a>
+                </li>
+    </ul>
+
+</div>
+
+                        </div>
+                            <div class="col-sm-12  col-md-12 col-lg-6 p-3 ">
+                                <div id="mapid" class="maplibregl-map mapboxgl-map"><div class="maplibregl-canvas-container mapboxgl-canvas-container maplibregl-interactive mapboxgl-interactive maplibregl-touch-drag-pan mapboxgl-touch-drag-pan maplibregl-touch-zoom-rotate mapboxgl-touch-zoom-rotate"><canvas class="maplibregl-canvas mapboxgl-canvas" tabindex="0" aria-label="Map" role="region" width="522" height="368" style="width: 522px; height: 368px;"></canvas></div><div class="maplibregl-control-container mapboxgl-control-container"><div class="maplibregl-ctrl-top-left mapboxgl-ctrl-top-left"></div><div class="maplibregl-ctrl-top-right mapboxgl-ctrl-top-right"></div><div class="maplibregl-ctrl-bottom-left mapboxgl-ctrl-bottom-left"><div class="maplibregl-ctrl mapboxgl-ctrl" style="display: none;"><a class="maplibregl-ctrl-logo mapboxgl-ctrl-logo" target="_blank" rel="noopener nofollow" href="https://maplibre.org/" aria-label="Mapbox logo"></a></div></div><div class="maplibregl-ctrl-bottom-right mapboxgl-ctrl-bottom-right"><div class="maplibregl-ctrl maplibregl-ctrl-attrib mapboxgl-ctrl mapboxgl-ctrl-attrib maplibregl-compact mapboxgl-compact"><button class="maplibregl-ctrl-attrib-button mapboxgl-ctrl-attrib-button" type="button" title="Toggle attribution" aria-label="Toggle attribution"></button><div class="maplibregl-ctrl-attrib-inner mapboxgl-ctrl-attrib-inner" role="list">© M.Transportes © OpenStreetMap</div></div></div></div></div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+                <div class="col-12 col-md-6 col-lg-6 my-3">
+                    <div class="descarga-fichero card h-100">
+                        <div class="card-header text-left container-Blue card-title ">
+                            GTFS-ZIP
+
+                                <button type="button" class="close fa text-white-50 b-metadata" data-toggle="modal" data-target="#modal-metadatos-1201" title="Mostrar metadatos" onclick="showMetadato('1201')" aria-label="info">
+                                    Ver metadatos
+                                </button>
+                        </div>
+                        <div class="card-body d-flex flex-column align-items-start justify-content-between text-left">
+                            <div class="card-info d-flex flex-column align-items-start">
+                                <p><span class="fa fa-calendar fa-lg text-info" aria-hidden="true"></span> Actualizado el 14/4/2026</p>
+
+                                    <p><span class="fa fa-check-square-o fa-lg text-success" aria-hidden="true"></span> Validado correctamente  (Sin avisos)</p>
+
+
+                            </div>
+
+                                    <a class="btn btn-primary btn-lg- btn-block btn-descargar-fichero loginRequired" href="/Account/Login?returnUrl=/Files/Detail/1000"><span class="downloadText"> <i class="fa fa-download" aria-hidden="true"></i> Descargar (266KB)</span><span class="loginText">Inicia sesión para descargar</span></a>
+                                    <div class="alert alert-info mobileLoginReq">Es necesario iniciar sesión para descargar el archivo.</div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+        </div>
+
+        <!-- Modal -->
+            <!-- Modal avisos -->
+            <div class="modal fade" id="modal-avisos-1201" tabindex="-1" role="dialog" aria-labelledby="modal-label-avisos" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content modal-avisos">
+
+
+
+
+
+                        <div class="modal-footer">
+
+                                    <a class="btn btn-primary btn-lg- btn-descargar-fichero loginRequired" href="/Account/Login?returnUrl=/Files/Detail/1000"><span class="downloadText"> <i class="fa fa-download" aria-hidden="true"></i> Descargar Detalle</span><span class="loginText">Inicia sesión para descargar</span></a>
+                                    <div class="alert alert-info mobileLoginReq">Es necesario iniciar sesión para descargar el archivo.</div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- Modal Metadatos -->
+            <div class="modal fade" id="modal-metadatos-1201" tabindex="-1" role="dialog" aria-labelledby="modal-label-metadatos" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+                    <div class="modal-content modal-metadatos">
+
+                            <div class="modal-header container-Blue">
+                                <h5 class="modal-title text-left card-title" id="modal-label-metadatos">Metadatos</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span class="fa fa-times-circle" style="color:white" aria-hidden="true"></span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="accordion" id="lstMetadatos-1201">
+                                        <div class="card divMetadatosCard">
+
+                                            <div class="card-header divMetadatosTitle" id="headingMetadato_1201_Informacióndelosmetadatos">
+
+                                                <div class="d-flex align-items-center " data-toggle="collapse" data-target="#collapse_1201_Informacióndelosmetadatos" aria-expanded="true" aria-controls="collapse_Información de los metadatos">
+                                                    <span class="fa fa-plus-circle fa-lg text-right" aria-hidden="true"></span>
+                                                    <span class="align-middle ml-1 font-weight-bold">Información de los metadatos</span>
+                                                </div>
+
+                                            </div>
+
+                                            <div id="collapse_1201_Informacióndelosmetadatos" class="collapse" aria-labelledby="headingMetadato_1201_Informacióndelosmetadatos" data-parent="#lstMetadatos-1201">
+                                                <div class="card-body">
+
+                                                    <table class="table table-bordered table-sm align-middle align-self-stretch">
+                                                        <tbody>
+
+                                                                <tr>
+                                                                    <td class="align-middle text-left font-weight-bold col-md-4">Fecha de los metadatos</td>
+                                                                        <td class="align-middle">04/14/2026 12:07:34</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="align-middle text-left font-weight-bold col-md-4">Lenguaje de los metadatos</td>
+                                                                        <td class="align-middle">spa</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="align-middle text-left font-weight-bold col-md-4">Nombre de la organización del Responsable de los metadatos</td>
+                                                                        <td class="align-middle">Ministerio de Transportes y Movilidad Sostenible</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="align-middle text-left font-weight-bold col-md-4">Correo electrónico del Responsable de los metadatos</td>
+                                                                        <td class="align-middle">
+                                                                            <a href="https://nap.transportes.gob.es/contacto" target="_blank">https://nap.transportes.gob.es/contacto</a>
+                                                                        </td>
+                                                                </tr>
+
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="card divMetadatosCard">
+
+                                            <div class="card-header divMetadatosTitle" id="headingMetadato_1201_Informacióndelcontenido">
+
+                                                <div class="d-flex align-items-center " data-toggle="collapse" data-target="#collapse_1201_Informacióndelcontenido" aria-expanded="true" aria-controls="collapse_Información del contenido">
+                                                    <span class="fa fa-plus-circle fa-lg text-right" aria-hidden="true"></span>
+                                                    <span class="align-middle ml-1 font-weight-bold">Información del contenido</span>
+                                                </div>
+
+                                            </div>
+
+                                            <div id="collapse_1201_Informacióndelcontenido" class="collapse" aria-labelledby="headingMetadato_1201_Informacióndelcontenido" data-parent="#lstMetadatos-1201">
+                                                <div class="card-body">
+
+                                                    <table class="table table-bordered table-sm align-middle align-self-stretch">
+                                                        <tbody>
+
+                                                                <tr>
+                                                                    <td class="align-middle text-left font-weight-bold col-md-4">Nombre del conjunto de datos</td>
+                                                                        <td class="align-middle">Lurraldebus Ekialdebus</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="align-middle text-left font-weight-bold col-md-4">Descripción del conjunto de datos</td>
+                                                                        <td class="align-middle">Servicios regulares de autobús de Ekialdebus</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="align-middle text-left font-weight-bold col-md-4">Tipo de recurso</td>
+                                                                        <td class="align-middle">Data set</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="align-middle text-left font-weight-bold col-md-4">Categoría tipo del conjunto de datos</td>
+                                                                        <td class="align-middle">Public transport: operational information</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="align-middle text-left font-weight-bold col-md-4">Lenguaje del conjunto de datos</td>
+                                                                        <td class="align-middle">spa</td>
+                                                                </tr>
+
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="card divMetadatosCard">
+
+                                            <div class="card-header divMetadatosTitle" id="headingMetadato_1201_Sistemadetransporte">
+
+                                                <div class="d-flex align-items-center " data-toggle="collapse" data-target="#collapse_1201_Sistemadetransporte" aria-expanded="true" aria-controls="collapse_Sistema de transporte">
+                                                    <span class="fa fa-plus-circle fa-lg text-right" aria-hidden="true"></span>
+                                                    <span class="align-middle ml-1 font-weight-bold">Sistema de transporte</span>
+                                                </div>
+
+                                            </div>
+
+                                            <div id="collapse_1201_Sistemadetransporte" class="collapse" aria-labelledby="headingMetadato_1201_Sistemadetransporte" data-parent="#lstMetadatos-1201">
+                                                <div class="card-body">
+
+                                                    <table class="table table-bordered table-sm align-middle align-self-stretch">
+                                                        <tbody>
+
+                                                                <tr>
+                                                                    <td class="align-middle text-left font-weight-bold col-md-4">Modo de transporte</td>
+                                                                        <td class="align-middle">bus</td>
+                                                                </tr>
+
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="card divMetadatosCard">
+
+                                            <div class="card-header divMetadatosTitle" id="headingMetadato_1201_Responsabilidades">
+
+                                                <div class="d-flex align-items-center " data-toggle="collapse" data-target="#collapse_1201_Responsabilidades" aria-expanded="true" aria-controls="collapse_Responsabilidades">
+                                                    <span class="fa fa-plus-circle fa-lg text-right" aria-hidden="true"></span>
+                                                    <span class="align-middle ml-1 font-weight-bold">Responsabilidades</span>
+                                                </div>
+
+                                            </div>
+
+                                            <div id="collapse_1201_Responsabilidades" class="collapse" aria-labelledby="headingMetadato_1201_Responsabilidades" data-parent="#lstMetadatos-1201">
+                                                <div class="card-body">
+
+                                                    <table class="table table-bordered table-sm align-middle align-self-stretch">
+                                                        <tbody>
+
+                                                                <tr>
+                                                                    <td class="align-middle text-left font-weight-bold col-md-4">Nombre de la organización del Responsable de la publicación</td>
+                                                                        <td class="align-middle">Ekialdebus</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="align-middle text-left font-weight-bold col-md-4">Nombre de la organización del Responsable de los datos</td>
+                                                                        <td class="align-middle">Ekialdebus</td>
+                                                                </tr>
+
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="card divMetadatosCard">
+
+                                            <div class="card-header divMetadatosTitle" id="headingMetadato_1201_Informacióntemporal">
+
+                                                <div class="d-flex align-items-center " data-toggle="collapse" data-target="#collapse_1201_Informacióntemporal" aria-expanded="true" aria-controls="collapse_Información temporal">
+                                                    <span class="fa fa-plus-circle fa-lg text-right" aria-hidden="true"></span>
+                                                    <span class="align-middle ml-1 font-weight-bold">Información temporal</span>
+                                                </div>
+
+                                            </div>
+
+                                            <div id="collapse_1201_Informacióntemporal" class="collapse" aria-labelledby="headingMetadato_1201_Informacióntemporal" data-parent="#lstMetadatos-1201">
+                                                <div class="card-body">
+
+                                                    <table class="table table-bordered table-sm align-middle align-self-stretch">
+                                                        <tbody>
+
+                                                                <tr>
+                                                                    <td class="align-middle text-left font-weight-bold col-md-4">Válido desde</td>
+                                                                        <td class="align-middle">04/13/2026 00:00:00</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="align-middle text-left font-weight-bold col-md-4">Válido hasta</td>
+                                                                        <td class="align-middle">07/12/2026 00:00:00</td>
+                                                                </tr>
+
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="card divMetadatosCard">
+
+                                            <div class="card-header divMetadatosTitle" id="headingMetadato_1201_Condicionesdeuso">
+
+                                                <div class="d-flex align-items-center " data-toggle="collapse" data-target="#collapse_1201_Condicionesdeuso" aria-expanded="true" aria-controls="collapse_Condiciones de uso">
+                                                    <span class="fa fa-plus-circle fa-lg text-right" aria-hidden="true"></span>
+                                                    <span class="align-middle ml-1 font-weight-bold">Condiciones de uso</span>
+                                                </div>
+
+                                            </div>
+
+                                            <div id="collapse_1201_Condicionesdeuso" class="collapse" aria-labelledby="headingMetadato_1201_Condicionesdeuso" data-parent="#lstMetadatos-1201">
+                                                <div class="card-body">
+
+                                                    <table class="table table-bordered table-sm align-middle align-self-stretch">
+                                                        <tbody>
+
+                                                                <tr>
+                                                                    <td class="align-middle text-left font-weight-bold col-md-4">Licencia de uso</td>
+                                                                        <td class="align-middle">Licence and Free of charge</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="align-middle text-left font-weight-bold col-md-4">Descripción de la licencia de uso</td>
+                                                                        <td class="align-middle">
+                                                                            <a href="https://nap.transportes.gob.es/licencia-datos" target="_blank">https://nap.transportes.gob.es/licencia-datos</a>
+                                                                        </td>
+                                                                </tr>
+
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="card divMetadatosCard">
+
+                                            <div class="card-header divMetadatosTitle" id="headingMetadato_1201_Accesoalainformación">
+
+                                                <div class="d-flex align-items-center " data-toggle="collapse" data-target="#collapse_1201_Accesoalainformación" aria-expanded="true" aria-controls="collapse_Acceso a la información">
+                                                    <span class="fa fa-plus-circle fa-lg text-right" aria-hidden="true"></span>
+                                                    <span class="align-middle ml-1 font-weight-bold">Acceso a la información</span>
+                                                </div>
+
+                                            </div>
+
+                                            <div id="collapse_1201_Accesoalainformación" class="collapse" aria-labelledby="headingMetadato_1201_Accesoalainformación" data-parent="#lstMetadatos-1201">
+                                                <div class="card-body">
+
+                                                    <table class="table table-bordered table-sm align-middle align-self-stretch">
+                                                        <tbody>
+
+                                                                <tr>
+                                                                    <td class="align-middle text-left font-weight-bold col-md-4">Formato</td>
+                                                                        <td class="align-middle">ASCII</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="align-middle text-left font-weight-bold col-md-4">Sintaxis</td>
+                                                                        <td class="align-middle">CSV</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="align-middle text-left font-weight-bold col-md-4">Modelo</td>
+                                                                        <td class="align-middle">GTFS</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="align-middle text-left font-weight-bold col-md-4">Protocolo de acceso</td>
+                                                                        <td class="align-middle">HTTP/HTTPS</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="align-middle text-left font-weight-bold col-md-4">Método de comunicación de actualizaciones</td>
+                                                                        <td class="align-middle">Pull</td>
+                                                                </tr>
+
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="card divMetadatosCard">
+
+                                            <div class="card-header divMetadatosTitle" id="headingMetadato_1201_Calidaddelainformación">
+
+                                                <div class="d-flex align-items-center " data-toggle="collapse" data-target="#collapse_1201_Calidaddelainformación" aria-expanded="true" aria-controls="collapse_Calidad de la información">
+                                                    <span class="fa fa-plus-circle fa-lg text-right" aria-hidden="true"></span>
+                                                    <span class="align-middle ml-1 font-weight-bold">Calidad de la información</span>
+                                                </div>
+
+                                            </div>
+
+                                            <div id="collapse_1201_Calidaddelainformación" class="collapse" aria-labelledby="headingMetadato_1201_Calidaddelainformación" data-parent="#lstMetadatos-1201">
+                                                <div class="card-body">
+
+                                                    <table class="table table-bordered table-sm align-middle align-self-stretch">
+                                                        <tbody>
+
+                                                                <tr>
+                                                                    <td class="align-middle text-left font-weight-bold col-md-4">Frecuencia de actualización</td>
+                                                                        <td class="align-middle">Up to 24h</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="align-middle text-left font-weight-bold col-md-4">Descripción de los criterios de calidad</td>
+                                                                        <td class="align-middle">Quality information is unknown</td>
+                                                                </tr>
+
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                </div>
+                            </div>
+
+                        <div class="modal-footer">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        <link href="/css/maplibre/maplibre-gl-inspect.css" rel="stylesheet">
+        <link href="/css/maplibre/maplibre-gl.css" rel="stylesheet">
+
+        <script src="/lib/maplibre/maplibre-gl.js"></script>
+        <script src="/lib/maplibre/maplibre-gl-inspect.min.js"></script>
+
+
+
+
+
+        <script type="text/javascript">
+            var conjuntoDatoStops = {"type":"FeatureCollection","features":[{"type":"Feature","properties":{"dbh":1000,"nombre":"Donostia - Mirakruz Kalea 26"},"geometry":{"type":"Point","coordinates":["-1,9736240958890077","43,32221794136212"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Donostia - Bidebieta"},"geometry":{"type":"Point","coordinates":["-1,9398488173632222","43,32190984282394"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Pasaia - Nafarroa Hiribidea 5"},"geometry":{"type":"Point","coordinates":["-1,9185096801472556","43,31928783700205"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Pasaia - Nafarroa Etorbidea, Pasai Antxo (renfe)"},"geometry":{"type":"Point","coordinates":["-1,9175419620799106","43,31891850231326"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Pasaia - Oleta / Escalerillas"},"geometry":{"type":"Point","coordinates":["-1,9315580192183772","43,32137346010632"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Pasai San Pedro - Euskadi Etorbidea 3"},"geometry":{"type":"Point","coordinates":["-1,9370169807583197","43,32234278636848"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Pasai San Pedro - Euskadi Etorbidea, Azoka"},"geometry":{"type":"Point","coordinates":["-1,9335059389061615","43,32282335491318"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Pasai San Pedro - Euskadi Etorbidea 61 Parean, Gudarien Plaza"},"geometry":{"type":"Point","coordinates":["-1,9301347551098738","43,3230620028452"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Pasai San Pedro - Euskadi Etorbidea, Gudarien Plaza"},"geometry":{"type":"Point","coordinates":["-1,9305397940812852","43,323173844965744"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Pasai San Pedro - Euskadi Etorbidea 25"},"geometry":{"type":"Point","coordinates":["-1,933615503281922","43,322905416948345"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Pasai San Pedro - Euskadi Etorbidea 1"},"geometry":{"type":"Point","coordinates":["-1,9366576479482125","43,32243849535796"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Pasaia - Nafarroa Etorbidea 24"},"geometry":{"type":"Point","coordinates":["-1,9156805432452586","43,318180510120314"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Pasai Donibane- Juan Xxiii (frontoia)"},"geometry":{"type":"Point","coordinates":["-1,914819437945285","43,32360204789567"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Pasai Donibane - Lezobidea 24, Meipi"},"geometry":{"type":"Point","coordinates":["-1,912307086719869","43,32270474671943"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Pasai San Pedro - Esnabide Kalea 6"},"geometry":{"type":"Point","coordinates":["-1,92613139657749","43,324879406218706"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Pasaia - San Roke Kalea 3"},"geometry":{"type":"Point","coordinates":["-1,91484489313063","43,324250612099426"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Pasai San Pedro - Ricardo Arrillaga Kalea  6"},"geometry":{"type":"Point","coordinates":["-1,9298435517836503","43,32419384342872"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Pasai San Pedro - Gran Sol Kalea 3"},"geometry":{"type":"Point","coordinates":["-1,9307063014116181","43,324931276292666"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Pasai San Pedro - Bordaenea Kalea 2"},"geometry":{"type":"Point","coordinates":["-1,9321708103083715","43,32581839445231"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Pasai San Pedro - Oiartzun Kalea 8"},"geometry":{"type":"Point","coordinates":["-1,9339168025587252","43,32471812744438"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Pasai San Pedro - Ulia Etorbidea 22"},"geometry":{"type":"Point","coordinates":["-1,9376390299065362","43,32557217212196"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Pasaia - Molinao"},"geometry":{"type":"Point","coordinates":["-1,91634314017224","43,31559349643553"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Donostia - Buenavista Hiribidea 14 Parean"},"geometry":{"type":"Point","coordinates":["-1,921810745368575","43,320912799648276"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Donostia - Jose Elosegi Alkatearen Hiribidea, Herrera"},"geometry":{"type":"Point","coordinates":["-1,9389831147785055","43,31992082684529"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Donostia - Jose Elosegi Alkatearen Hiribidea 107 Parean, Gaiztarro"},"geometry":{"type":"Point","coordinates":["-1,9434707345584772","43,320718748845614"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Donostia - Jose Elosegi Alkatearen Hiribidea 111"},"geometry":{"type":"Point","coordinates":["-1,9433510142160433","43,32051053949768"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Donostia - Gipuzkoa Plaza 10"},"geometry":{"type":"Point","coordinates":["-1,9818164810487937","43,32129166988961"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Donostia - Pasai San Pedro 25, Bidebieta"},"geometry":{"type":"Point","coordinates":["-1,9399696241363997","43,3220550344267"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Donostia - Gipuzkoa Plaza"},"geometry":{"type":"Point","coordinates":["-1,981660235996646","43,321047157357235"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Donostia - Zorroaga 39 - Illunbe"},"geometry":{"type":"Point","coordinates":["-1,9681040614392507","43,300773554015905"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Donostia - Ospitalea"},"geometry":{"type":"Point","coordinates":["-1,9685219771984255","43,29355568923511"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Donostia - Begiristain Doktorearen Pasealekua, Begiristain Ii"},"geometry":{"type":"Point","coordinates":["-1,9680153359087278","43,30091682589823"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Donostia - Barcelona Hiribidea, 15"},"geometry":{"type":"Point","coordinates":["-1,9718357466420082","43,3090553020438"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Donostia - Barcelona Hiribidea 28"},"geometry":{"type":"Point","coordinates":["-1,9718008377610465","43,31112602612656"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Donostia -  Jose Elosegi Alkatearen Hiribidea 101 Parean, Elosegi 283"},"geometry":{"type":"Point","coordinates":["-1,9451241934960837","43,32138233492827"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Donostia - Kolon Pasalekua 13, Gros"},"geometry":{"type":"Point","coordinates":["-1,9771132083834033","43,323023587065514"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Donostia - Okendo Kalea, 18"},"geometry":{"type":"Point","coordinates":["-1,9809748003998298","43,32147326803109"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Donostia - Begiristain Doktorea 121, Onkologikoa"},"geometry":{"type":"Point","coordinates":["-1,9735588567964795","43,29165602253575"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Donostia - Bizkaia Pasealekua 2, Mundaiz Zubia"},"geometry":{"type":"Point","coordinates":["-1,9790920151163824","43,31091220201923"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Donostia - Mirakruz Gaina"},"geometry":{"type":"Point","coordinates":["-1,950118744122049","43,32140127990095"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Donostia - Urumea Pasalekua 15, Aldunaene"},"geometry":{"type":"Point","coordinates":["-1,9761096332342565","43,30860739944981"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Donostia - Begiristain Doktorea 218, Onkologikoa"},"geometry":{"type":"Point","coordinates":["-1,9741029802303793","43,291552849904306"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Donostia - Buenavista Hiribidea 14, Buenavista"},"geometry":{"type":"Point","coordinates":["-1,921788471956086","43,320777522352444"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Donostia - Ategorrieta 65"},"geometry":{"type":"Point","coordinates":["-1,9621462530989158","43,321961283054534"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Lezo - Gaintxurizketa Gaina"},"geometry":{"type":"Point","coordinates":["-1,8505158383912153","43,32997928678298"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Lezo - Jaizkibel Etorbidea, Ijurko"},"geometry":{"type":"Point","coordinates":["-1,8974559087121814","43,32144598301933"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Lezo - Jaizkibel Etorbidea, Herrigunea"},"geometry":{"type":"Point","coordinates":["-1,897922854716404","43,32154052846197"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Lezo - Kiroldegia"},"geometry":{"type":"Point","coordinates":["-1,8999174367120708","43,31899345355248"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Lezo - Kiroldegia"},"geometry":{"type":"Point","coordinates":["-1,8995846785822534","43,31898124781957"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Lezo - Errekalde Bailara"},"geometry":{"type":"Point","coordinates":["-1,8571379706834237","43,32677703470468"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Lezo - Perrene Auzoa"},"geometry":{"type":"Point","coordinates":["-1,8551155458030537","43,32741413234642"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Donostia - Jose Elosegi Alkatearen Hiribidea 5 Parean, Ategorrieta"},"geometry":{"type":"Point","coordinates":["-1,959227592535043","43,32170964752513"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Donostia - Maria Cristina Zubia"},"geometry":{"type":"Point","coordinates":["-1,9788425754453525","43,31770837825577"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Donostia - Loiolako Erribera Pasealekua"},"geometry":{"type":"Point","coordinates":["-1,9733614717617547","43,30924909801426"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Donostia - Riberas De Loiola 12-14"},"geometry":{"type":"Point","coordinates":["-1,9733494540145946","43,3114280821713"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Donostia - Antso Jakitunaren Hiribidea 26"},"geometry":{"type":"Point","coordinates":["-1,9798671487451063","43,30880305759435"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Irun - Letxumborro Hiribidea 59 Parean, Aranibar"},"geometry":{"type":"Point","coordinates":["-1,8231563214529298","43,33003418300655"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Irun - Gipuzkoa Hiribidea 1, Luis Mariano"},"geometry":{"type":"Point","coordinates":["-1,794699137067702","43,33943558851704"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Irun - Letxunborro Hiribidea, Suhiltzaileak"},"geometry":{"type":"Point","coordinates":["-1,823412345082884","43,33018989306063"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Irun - Elizatxo Hiribidea 14, La Salle"},"geometry":{"type":"Point","coordinates":["-1,799086246924387","43,3352946782752"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Irun - Gipuzkoa Hiribidea 6, Luis Mariano"},"geometry":{"type":"Point","coordinates":["-1,7946557229091729","43,3397592906081"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Irun - Hondarribia Kalea 25, Gurutze Gorria"},"geometry":{"type":"Point","coordinates":["-1,7997801191490888","43,343279893452014"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Irun - Zabaltza Plaza 1, Colon-zabaltza"},"geometry":{"type":"Point","coordinates":["-1,7926132761739215","43,3401069268763"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Donostia - Azkuene Kalea 35"},"geometry":{"type":"Point","coordinates":["-1,9384502686438476","43,32573278113176"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Irun - Zubiaurre Kalea 5"},"geometry":{"type":"Point","coordinates":["-1,7990451739815885","43,34175943318189"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Irun - Larreaundi Biribilgunea"},"geometry":{"type":"Point","coordinates":["-1,7895133607703908","43,33344688980251"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Irun - Colon Ibilbidea 52, Euskotren"},"geometry":{"type":"Point","coordinates":["-1,7962635521968044","43,34080273127272"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Irun - Colon Ibilbidea 43"},"geometry":{"type":"Point","coordinates":["-1,7964857484905066","43,34079606544138"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Hondarrbia - Jaitzubia-bidasoa Ospitalea (hondarribirantz)"},"geometry":{"type":"Point","coordinates":["-1,8165802117342074","43,34409429419638"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Irun - Ferm\u00EDn Calbet\u00F3n Kalea 3"},"geometry":{"type":"Point","coordinates":["-1,7889273365255478","43,339347597243226"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Donostia - Azkuene Kalea 19"},"geometry":{"type":"Point","coordinates":["-1,9377813317577237","43,324483951333214"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Irun - Hondarribia Kalea"},"geometry":{"type":"Point","coordinates":["-1,799117141239218","43,34248954794006"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Irun - Elizatxo Hiribidea 11"},"geometry":{"type":"Point","coordinates":["-1,7963403262207773","43,336292316388246"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Irun - Elizatxo Hiribidea 54"},"geometry":{"type":"Point","coordinates":["-1,8100285282255877","43,33148312164569"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Irun - Elizatxo Hiribidea, Piketazaharra"},"geometry":{"type":"Point","coordinates":["-1,8072436668489869","43,33196736396871"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Irun - Elizatxo Hiribidea  36, Oinaurre"},"geometry":{"type":"Point","coordinates":["-1,8055265908545848","43,33272382505206"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Irun - Euskal Herria Hiribidea 9"},"geometry":{"type":"Point","coordinates":["-1,7937310543746612","43,3341217665324"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Irun - Urdanibia Plaza"},"geometry":{"type":"Point","coordinates":["-1,7858035573550135","43,33762163978648"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Irun - Gaintxurizketa Gaina"},"geometry":{"type":"Point","coordinates":["-1,848650414354024","43,33013160661321"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Irun- Molino Errepidea (donostiarantz)"},"geometry":{"type":"Point","coordinates":["-1,8142885118171648","43,331257235249566"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Irun- Molino Errepidea (irunerantz)"},"geometry":{"type":"Point","coordinates":["-1,8144373775832587","43,33121375634328"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Donostia - Urbieta Kalea 50"},"geometry":{"type":"Point","coordinates":["-1,981224025824442","43,31467708932894"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Hondarribia - Amute Auzoa 49, Kaputxinoak"},"geometry":{"type":"Point","coordinates":["-1,7980240373867364","43,3528691689026"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Hondarribia - Aireportua"},"geometry":{"type":"Point","coordinates":["-1,7932169763186865","43,35696057142845"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Hondarribia - Sabin Arana Goiri Kalea 3"},"geometry":{"type":"Point","coordinates":["-1,789987683581053","43,36173479944265"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Hondarribia - Sabin Arana Goiri Kalea, Ama Guadalupekoa Ikastetxea"},"geometry":{"type":"Point","coordinates":["-1,7923551764404733","43,3655686864057"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Hondarribia - Itsasargi Kalea 3"},"geometry":{"type":"Point","coordinates":["-1,7937606107157493","43,369383373769224"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Hondarribia - Bernat Etxepare, Correos"},"geometry":{"type":"Point","coordinates":["-1,7927046254576002","43,36599558283523"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Hondarribia - Sabin Arana Goiri Kalea 3 Parean"},"geometry":{"type":"Point","coordinates":["-1,7899851784442424","43,361860834545126"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Hondarribia - Aireportu Kanpoaldea"},"geometry":{"type":"Point","coordinates":["-1,7944553727402015","43,356739518737506"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Hondarribia - Amutea Auzoa 8"},"geometry":{"type":"Point","coordinates":["-1,798401620190664","43,35124333746972"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Hondarribia - Mendelu Kalea 17"},"geometry":{"type":"Point","coordinates":["-1,8012091453788275","43,347148777598846"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Hondarribia - Itsasargi Kalea 20, La Muela"},"geometry":{"type":"Point","coordinates":["-1,7934890262265746","43,37125342148466"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Hondarribia - Mendelu Kalea 24"},"geometry":{"type":"Point","coordinates":["-1,801392408743617","43,34724074281115"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Hondarribia - Amutea Auzoa 8 Parean"},"geometry":{"type":"Point","coordinates":["-1,7982297977317236","43,35119650983881"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Hondarribia - Kosta Kalea 3 Hondarribirantz"},"geometry":{"type":"Point","coordinates":["-1,797007247377622","43,35811705353357"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Hondarribia - Ramon Iribarren Pasealekua 26, Lurgorri"},"geometry":{"type":"Point","coordinates":["-1,7961191094670748","43,38368016946583"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Hondarribia - Ramon Iribarren Pasealekua 15 Parean, Iterlimen"},"geometry":{"type":"Point","coordinates":["-1,7982100649396857","43,38032552456134"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Hondarribia - Ramon Iribarren Pasealekua 15, Iterlimen"},"geometry":{"type":"Point","coordinates":["-1,7983626919433193","43,38072332097596"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Hondarribia - Foru Kalea 3"},"geometry":{"type":"Point","coordinates":["-1,7942130468304602","43,37208946174641"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Hondarribia - Foru Kalea 15 Parean, Arroka"},"geometry":{"type":"Point","coordinates":["-1,796727042421473","43,37479024502219"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Hondarribia - Foru Kalea 15, Arroka"},"geometry":{"type":"Point","coordinates":["-1,796865288154086","43,374665638278465"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Hondarribia - Minasoroeta-zumardia"},"geometry":{"type":"Point","coordinates":["-1,792600050924699","43,361312191561"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Hondarribia - Kosta Kalea 17"},"geometry":{"type":"Point","coordinates":["-1,7980529995595245","43,355777898897415"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Hondarribia - Donostia Kalea 2, Madalengain"},"geometry":{"type":"Point","coordinates":["-1,7957365388174222","43,368080553993956"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Hondarribia - Baserritar Etorbidea 64, Talaia"},"geometry":{"type":"Point","coordinates":["-1,7995993664480983","43,37122768319791"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Hondarribia - Donostia Kalea 36, Sokoa"},"geometry":{"type":"Point","coordinates":["-1,7969492392099027","43,371668061357084"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Hondarribia - Santa Engrazia Auzoa 8"},"geometry":{"type":"Point","coordinates":["-1,795166058407642","43,36073596061579"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Hondarribia - Minasoroeta Kalea 11"},"geometry":{"type":"Point","coordinates":["-1,793590877214878","43,361133556325385"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Hondarribia - Matxin Arzu Kalea 4, La Marina Eliza"},"geometry":{"type":"Point","coordinates":["-1,793073603741606","43,36730511487077"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Hondarribia - Jaitzubia-bidasoa Ospitalea (donostirantz)"},"geometry":{"type":"Point","coordinates":["-1,816551343839748","43,34431010183923"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Hondarribia - Sabin Arana Goiri 8 Parean"},"geometry":{"type":"Point","coordinates":["-1,791275208567144","43,36463882781542"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Donostia - Renfe Geltokia"},"geometry":{"type":"Point","coordinates":["-1,9771523983303527","43,317747301849664"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Donostia - Mendeurrenaren Plaza, Centenario"},"geometry":{"type":"Point","coordinates":["-1,98032037853424","43,312670035400096"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Donostia - Jose Elosegi Alkatearen Hiribidea, Mirakruz Gaina"},"geometry":{"type":"Point","coordinates":["-1,9481716763184493","43,321311353548204"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Donostia - Aita Donostia Plaza, Anoeta"},"geometry":{"type":"Point","coordinates":["-1,975147094626347","43,302781858526444"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Donostia - Jose Elosegi Alkatearen Hiribidea 128a, Herrera Euskotren"},"geometry":{"type":"Point","coordinates":["-1,9382671480185172","43,31995920486696"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Donostia - Toribio Altzaga Kalea - Arcco"},"geometry":{"type":"Point","coordinates":["-1,9736300877298512","43,305010381163264"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Donostia - Nafarroa Hiribidea 31, Jesuitak"},"geometry":{"type":"Point","coordinates":["-1,9673777150593288","43,323287275284855"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Donostia - Zurriola Pasealekua, Kursaal"},"geometry":{"type":"Point","coordinates":["-1,9768258379997177","43,32471386109116"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Donostia - Ategorrieta Hiribidea 64, Jai Alai"},"geometry":{"type":"Point","coordinates":["-1,9664611247160513","43,32206338925769"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Donostia - Miramon Pasealekua, Poliklinika Ii"},"geometry":{"type":"Point","coordinates":["-1,9798319542171547","43,29026241603562"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Donostia - Begiristain Doktorea 115, Ospitalea"},"geometry":{"type":"Point","coordinates":["-1,9704949511234529","43,29279007053137"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Donostia -  Oleta / Escalerillas"},"geometry":{"type":"Point","coordinates":["-1,9310421692408037","43,32125158141718"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Donostia - Begiristain Doktorea, Ospitalea Ii"},"geometry":{"type":"Point","coordinates":["-1,9705893018841374","43,293043046843835"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Errenteria - Beraun Kalea 15"},"geometry":{"type":"Point","coordinates":["-1,9088714950344217","43,309309353618076"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Errenteria - Kaputxinoak"},"geometry":{"type":"Point","coordinates":["-1,9112906894249058","43,31746346884393"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Errenteria - Gamon Zumardia"},"geometry":{"type":"Point","coordinates":["-1,8968135546826423","43,31264240309675"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Errenteria - Nafarroa Hiribidea (irunerantz), Gabierrota"},"geometry":{"type":"Point","coordinates":["-1,8890959590120693","43,31051467436056"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Errenteria - Gamon Zumardia"},"geometry":{"type":"Point","coordinates":["-1,8970938675056273","43,31282519653389"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Errenteria - Nafarroa Hiribidea 2, Gabierrota"},"geometry":{"type":"Point","coordinates":["-1,8908196763756802","43,3106574674379"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Errenteria - Lartzabal Auzoa 3"},"geometry":{"type":"Point","coordinates":["-1,8841774984805524","43,31043077576116"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Errenteria - Diputazio Plaza"},"geometry":{"type":"Point","coordinates":["-1,9026908683136847","43,31495907228321"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Errenteria - Kaputxinoak (biribilgunea)"},"geometry":{"type":"Point","coordinates":["-1,9123600386681574","43,317662737700516"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Errenteria  - Sorgintzulo Kalea 11 Parean"},"geometry":{"type":"Point","coordinates":["-1,9096584154680092","43,31633136201835"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Errenteria - Sorgintzulo Kalea 6, Kristobal Gamon Ikastetxea"},"geometry":{"type":"Point","coordinates":["-1,9078348689027702","43,31761961361487"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Errenteria - Alaberga Auzoa 54 Parean, Telef\u00F3nica"},"geometry":{"type":"Point","coordinates":["-1,9075945028105787","43,31520411418472"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Errenteria - Galtzaraborda Etorbidea 67, Beraungo Osasun Zentroa"},"geometry":{"type":"Point","coordinates":["-1,9105114382478516","43,31414239471411"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Errenteria - Pontika"},"geometry":{"type":"Point","coordinates":["-1,9039389790561252","43,30932522059201"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Errenteria - Galtzaraborda Etorbidea 67 Parean, Beraungo Osasun Zentroa"},"geometry":{"type":"Point","coordinates":["-1,9114597268038143","43,313521109571184"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Errenteria - Alaberga Auzoa 53, Telef\u00F3nica"},"geometry":{"type":"Point","coordinates":["-1,9079080652254186","43,314909960504565"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Errenteria - Sorgintzulo Kalea 6 Parean, Versalles Dorrea"},"geometry":{"type":"Point","coordinates":["-1,9082028388927927","43,317731180873025"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Errenteria  - Sorgintzulo Kalea 11"},"geometry":{"type":"Point","coordinates":["-1,909583953096084","43,31635766557292"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Errenteria - Nafarroa Hiribidea 75, Iztieta"},"geometry":{"type":"Point","coordinates":["-1,9025823323706748","43,31482296348122"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Errenteria - Galtzaraborda Hiribidea 53 Parean"},"geometry":{"type":"Point","coordinates":["-1,9117333464493074","43,31131761137337"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Errenteria - Galtzaraborda Etorbidea 61"},"geometry":{"type":"Point","coordinates":["-1,9126762507027688","43,31168675960314"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Errenteria - Galtzaraborda Etorbidea, Koldo Mitxelena"},"geometry":{"type":"Point","coordinates":["-1,9083488668225772","43,31095219010024"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Errenteria - Urbia Plaza 1"},"geometry":{"type":"Point","coordinates":["-1,905687513893463","43,311521053475246"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Errenteria - Morrongilleta 24, Aralar Plaza"},"geometry":{"type":"Point","coordinates":["-1,90263725412247","43,31177096648364"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Errenteria - Lartzabal Auzoa 1 Parean"},"geometry":{"type":"Point","coordinates":["-1,8848488221677788","43,31080650783253"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Donostia - Nafarroa Hiribidea 7, Okendo Kultur Etxea"},"geometry":{"type":"Point","coordinates":["-1,9703004829618005","43,325492714214626"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Oiartzun - Lintzirin Poligonoa 12"},"geometry":{"type":"Point","coordinates":["-1,875458972551504","43,3144784438379"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Oiartzun - Lanbarren Industrialdea"},"geometry":{"type":"Point","coordinates":["-1,8671936965484162","43,32061897246799"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Oiartzun - Gi-636 Lintzirin"},"geometry":{"type":"Point","coordinates":["-1,877143332490615","43,313414454480856"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Oiartzun - Lanbarren Industrialdea"},"geometry":{"type":"Point","coordinates":["-1,867816954783325","43,319598633640915"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Oiartzun - Oreretako Bidea 23, Arragua"},"geometry":{"type":"Point","coordinates":["-1,8821729824850484","43,308790391830556"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Oiartzun -  Urkia Bidea 12, Talaia Industrialdea"},"geometry":{"type":"Point","coordinates":["-1,883624304316859","43,304275303008936"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Oiartzun - Mamut Merk.gunea"},"geometry":{"type":"Point","coordinates":["-1,8822955578481058","43,3021012435317"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Oiartzun - Ugaldetxo"},"geometry":{"type":"Point","coordinates":["-1,8757657077856675","43,298507474842815"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Oiartzun - Iparralde Etorbidea, Eliza"},"geometry":{"type":"Point","coordinates":["-1,8601527142856946","43,30010881672508"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Oiartzun - Santusene Kalea 2, Belutene"},"geometry":{"type":"Point","coordinates":["-1,8580960970161273","43,29669360113211"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Oiartzun - Altzibar"},"geometry":{"type":"Point","coordinates":["-1,8573061489733185","43,29345309058354"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Oiartzun - Kaleberrria, Pe\u00F1ene"},"geometry":{"type":"Point","coordinates":["-1,859762491789346","43,29262217645342"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Oiartzun - Iturriotz, Herrigunea"},"geometry":{"type":"Point","coordinates":["-1,8657678471880244","43,293177138148685"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Oiartzun - Araneder Bidea 18 Parean, Ibarre"},"geometry":{"type":"Point","coordinates":["-1,8723181758693344","43,29626742861691"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Oiartzun - Ihurrita Bidea 10a, Ugaldetxo"},"geometry":{"type":"Point","coordinates":["-1,8772204262911654","43,29917909450711"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Oiartzun - Mamut Merk.gunea"},"geometry":{"type":"Point","coordinates":["-1,8816960459137524","43,301176923158536"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Oiartzun - Lartzabal Etxadia 1, Arragua"},"geometry":{"type":"Point","coordinates":["-1,8819605965476909","43,308941392271514"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Oiartzun - Joansendo Kalea 5 Parean, Aristegi"},"geometry":{"type":"Point","coordinates":["-1,8806043789819578","43,299527422692805"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Oiartzun - Joansendo Kalea 5, Aristegi"},"geometry":{"type":"Point","coordinates":["-1,8807634658240713","43,299592011219744"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Oiartzun -  Rafael Pikabea Biribilgunea"},"geometry":{"type":"Point","coordinates":["-1,8678747781421263","43,299213029358036"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Oiartzun - Rafael Pikabea Etorbidea 25"},"geometry":{"type":"Point","coordinates":["-1,863830762461225","43,299226954198566"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Oiartzun - Oreretako Bidea, Mendin"},"geometry":{"type":"Point","coordinates":["-1,8741455591332898","43,30346202671429"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Oiartzun - Yon O\u00F1atibia Etorbidea 13, Pikabene"},"geometry":{"type":"Point","coordinates":["-1,8656912373584715","43,3006141066089"]}},{"type":"Feature","properties":{"dbh":1000,"nombre":"Donostia - Jose Elosegi Alkatearen Hiribidea 102, Elosegi 102"},"geometry":{"type":"Point","coordinates":["-1,9449551421415654","43,32117367225726"]}}]};
+            var maxLng = -1.7858035573550135, maxLtd = 43.38368016946583;
+            var minLng = -1.9818164810487937, minLtd = "43.29026241603562";
+            var count_conjuntoDatoStops = 175;
+            var conjuntoDatoId = 1000;
+
+        </script>
+        <script src="/js/Files/detail.js?v=TszL8uffiJOrE0mYo6xbw01ba_ZwBpIREhIXrMcOOQk"></script>
+
+</div></main>
+
+		</main>
+		<div class="space"></div>
+		<div id="footer-container">
+			<div class="banda-color"></div>
+			<footer class="footer">
+				<div class="box-icon-footer align-self-end">
+					<img class="icono-footer" src="/images/logoplanonap.svg" alt="Logotipo ministerio de transporte">
+				</div>
+				<div class="container">
+					<div class="row containerFooter">
+						<div class="col-6 col-sm-5 footer-nav">
+							<ul role="menubar">
+								<li role="menuitem">
+									<a class="" href="/quienes-somos">Quiénes somos</a>
+								</li>
+								<li role="menuitem">
+									<a class="" href="/quiero-participar">Quiero Participar</a>
+								</li>
+								<li role="menuitem">
+									<a class="" href="/contacto">Contacto</a>
+								</li>
+								<li role="menuitem">
+									<a class="" href="/documentos-interes">Documentos de interés</a>
+								</li>
+							</ul>
+						</div>
+						<div class="col-6 col-sm-7 footer-nav">
+							<ul role="menubar">
+								<li role="menuitem">
+									<a class="" href="/faqs">FAQs</a>
+								</li>
+								<li role="menuitem">
+									<a class="" href="/licencia-datos">Licencia de datos</a>
+								</li>
+								<li role="menuitem">
+									<a class="" href="/condiciones-uso">Condiciones de uso</a>
+								</li>
+								<li role="menuitem">
+									<a class="" href="/entidades-colaboradoras">Entidades colaboradoras</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="reFooter d-flex flex-nowrap">
+					<p class="d-flex flex-nowrap">Gobierno de España - Ministerio de Transportes y Movilidad Sostenible - NAP</p>
+				</div>
+			</footer>
+			<a href="" class="up">
+				<span class="sr-only">Subir al encabezado de la página </span>
+				<span class="fa fa-arrow-up" aria-hidden="true"></span>
+			</a>
+		</div>
+	</div><script type="text/javascript" id="" charset="">(function(a,e,b,f,g,c,d){a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)};c=e.createElement(f);c.async=1;c.src="https://www.clarity.ms/tag/"+g+"?ref\x3dgtm2";d=e.getElementsByTagName(f)[0];d.parentNode.insertBefore(c,d)})(window,document,"clarity","script","j6b0ph194c");</script>
+	
+
+	<div class="lds-dual-ring">
+	</div>
+
+
+<script>
+	$(document).ready(function () {
+		$('.btn-cabecera-responsive').on('click', function () {
+			$('.icono-animado').toggleClass('open');
+		});
+	});
+</script>
+
+
+</body></html>

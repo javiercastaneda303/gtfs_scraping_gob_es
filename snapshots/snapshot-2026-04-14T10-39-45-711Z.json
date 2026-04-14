@@ -1,0 +1,746 @@
+{
+  "timestamp": "2026-04-14T10:39:45.711Z",
+  "total": 148,
+  "items": {
+    "896": {
+      "id": 896,
+      "titulo": "Autobús urbano de Madrid",
+      "ultimaActualizacion": "14/4/2026"
+    },
+    "897": {
+      "id": 897,
+      "titulo": "RENFE - Media, Larga Distancia y AVE",
+      "ultimaActualizacion": "14/4/2026"
+    },
+    "920": {
+      "id": 920,
+      "titulo": "AECFA slots",
+      "ultimaActualizacion": "14/4/2026"
+    },
+    "929": {
+      "id": 929,
+      "titulo": "Cercanías Renfe",
+      "ultimaActualizacion": "13/4/2026"
+    },
+    "930": {
+      "id": 930,
+      "titulo": "Feve",
+      "ultimaActualizacion": "13/4/2026"
+    },
+    "931": {
+      "id": 931,
+      "titulo": "VAC-232. Madrid, Málaga y Algeciras (Cádiz)",
+      "ultimaActualizacion": "3/2/2025"
+    },
+    "932": {
+      "id": 932,
+      "titulo": "ALSA autobuses",
+      "ultimaActualizacion": "14/4/2026"
+    },
+    "933": {
+      "id": 933,
+      "titulo": "Metro de Madrid",
+      "ultimaActualizacion": "30/5/2025"
+    },
+    "934": {
+      "id": 934,
+      "titulo": "Autobús urbano de Madrid (CRTM)",
+      "ultimaActualizacion": "9/4/2026"
+    },
+    "962": {
+      "id": 962,
+      "titulo": "Cercanías Madrid",
+      "ultimaActualizacion": "3/2/2025"
+    },
+    "963": {
+      "id": 963,
+      "titulo": "Autobús interurbano de Navarra",
+      "ultimaActualizacion": "3/2/2025"
+    },
+    "964": {
+      "id": 964,
+      "titulo": "Autobuses Samar",
+      "ultimaActualizacion": "6/4/2026"
+    },
+    "965": {
+      "id": 965,
+      "titulo": "Autobús urbano de Valencia",
+      "ultimaActualizacion": "23/3/2026"
+    },
+    "966": {
+      "id": 966,
+      "titulo": "Trenes y tranvías de Alicante y Costa Blanca",
+      "ultimaActualizacion": "22/12/2025"
+    },
+    "967": {
+      "id": 967,
+      "titulo": "Metro de Valencia",
+      "ultimaActualizacion": "26/3/2026"
+    },
+    "968": {
+      "id": 968,
+      "titulo": "Autocares Baraza",
+      "ultimaActualizacion": "11/4/2026"
+    },
+    "969": {
+      "id": 969,
+      "titulo": "Autobús urbano de Ávila",
+      "ultimaActualizacion": "18/7/2025"
+    },
+    "970": {
+      "id": 970,
+      "titulo": "Autocares Autocorb",
+      "ultimaActualizacion": "5/2/2026"
+    },
+    "971": {
+      "id": 971,
+      "titulo": "Autobús urbano de Huesca",
+      "ultimaActualizacion": "3/2/2025"
+    },
+    "972": {
+      "id": 972,
+      "titulo": "Autobús urbano de Mataró",
+      "ultimaActualizacion": "6/2/2026"
+    },
+    "973": {
+      "id": 973,
+      "titulo": "Autobús urbano de Soria",
+      "ultimaActualizacion": "3/2/2025"
+    },
+    "974": {
+      "id": 974,
+      "titulo": "Autobús urbano de Tarrasa",
+      "ultimaActualizacion": "20/10/2025"
+    },
+    "975": {
+      "id": 975,
+      "titulo": "Transporte urbano de Zaragoza",
+      "ultimaActualizacion": "18/7/2025"
+    },
+    "976": {
+      "id": 976,
+      "titulo": "Autobús Comarca de Pamplona",
+      "ultimaActualizacion": "14/4/2026"
+    },
+    "977": {
+      "id": 977,
+      "titulo": "Autobús Principado de Asturias",
+      "ultimaActualizacion": "14/4/2026"
+    },
+    "995": {
+      "id": 995,
+      "titulo": "Donostiabus (Dbus)",
+      "ultimaActualizacion": "13/4/2026"
+    },
+    "997": {
+      "id": 997,
+      "titulo": "Lurraldebus Arrasate",
+      "ultimaActualizacion": "13/4/2026"
+    },
+    "998": {
+      "id": 998,
+      "titulo": "Lurraldebus auif",
+      "ultimaActualizacion": "14/4/2026"
+    },
+    "999": {
+      "id": 999,
+      "titulo": "Lurraldebus Eibar",
+      "ultimaActualizacion": "13/4/2026"
+    },
+    "1000": {
+      "id": 1000,
+      "titulo": "Lurraldebus Ekialdebus",
+      "ultimaActualizacion": "14/4/2026"
+    },
+    "1001": {
+      "id": 1001,
+      "titulo": "Lurraldebus Euskotren bus",
+      "ultimaActualizacion": "14/4/2026"
+    },
+    "1003": {
+      "id": 1003,
+      "titulo": "Lurraldebus Guipuzcoana",
+      "ultimaActualizacion": "14/4/2026"
+    },
+    "1028": {
+      "id": 1028,
+      "titulo": "Lurraldebus Goierrialdea",
+      "ultimaActualizacion": "14/4/2026"
+    },
+    "1029": {
+      "id": 1029,
+      "titulo": "Urbano de Hernani (Hernaniko hiribusa)",
+      "ultimaActualizacion": "13/4/2026"
+    },
+    "1030": {
+      "id": 1030,
+      "titulo": "Lurraldebus Lasarte",
+      "ultimaActualizacion": "13/4/2026"
+    },
+    "1031": {
+      "id": 1031,
+      "titulo": "Lurraldebus Oiartzun",
+      "ultimaActualizacion": "13/4/2026"
+    },
+    "1032": {
+      "id": 1032,
+      "titulo": "Lurraldebus Pesa",
+      "ultimaActualizacion": "14/4/2026"
+    },
+    "1033": {
+      "id": 1033,
+      "titulo": "Urbano de Errentería (Errenteria Urbanoa)",
+      "ultimaActualizacion": "13/4/2026"
+    },
+    "1034": {
+      "id": 1034,
+      "titulo": "Lurraldebus Tolosaldea",
+      "ultimaActualizacion": "14/4/2026"
+    },
+    "1036": {
+      "id": 1036,
+      "titulo": "Lurraldebus Zarautz",
+      "ultimaActualizacion": "13/4/2026"
+    },
+    "1061": {
+      "id": 1061,
+      "titulo": "Bizkaibus",
+      "ultimaActualizacion": "21/3/2026"
+    },
+    "1062": {
+      "id": 1062,
+      "titulo": "Euskotren",
+      "ultimaActualizacion": "14/4/2026"
+    },
+    "1063": {
+      "id": 1063,
+      "titulo": "Funicular de Artxanda",
+      "ultimaActualizacion": "14/1/2026"
+    },
+    "1065": {
+      "id": 1065,
+      "titulo": "Autobuses La Unión (ALU)",
+      "ultimaActualizacion": "14/4/2026"
+    },
+    "1066": {
+      "id": 1066,
+      "titulo": "Metro Bilbao",
+      "ultimaActualizacion": "25/3/2026"
+    },
+    "1069": {
+      "id": 1069,
+      "titulo": "Transbordador Puente Bizkaia",
+      "ultimaActualizacion": "6/11/2025"
+    },
+    "1070": {
+      "id": 1070,
+      "titulo": "Transportes Urbanos de Vitoria (TUVISA)",
+      "ultimaActualizacion": "13/4/2026"
+    },
+    "1071": {
+      "id": 1071,
+      "titulo": "Transporte público de la Isla de Mallorca",
+      "ultimaActualizacion": "13/4/2026"
+    },
+    "1072": {
+      "id": 1072,
+      "titulo": "Autobús de la isla de Ibiza",
+      "ultimaActualizacion": "7/11/2025"
+    },
+    "1094": {
+      "id": 1094,
+      "titulo": "Autobús urbano de Las Palmas de Gran Canaria",
+      "ultimaActualizacion": "17/12/2025"
+    },
+    "1127": {
+      "id": 1127,
+      "titulo": "Transporte metropolitano de Barcelona (Bus y Metro)",
+      "ultimaActualizacion": "10/4/2026"
+    },
+    "1128": {
+      "id": 1128,
+      "titulo": "Tranvía Metropolitano Barcelona",
+      "ultimaActualizacion": "13/4/2026"
+    },
+    "1129": {
+      "id": 1129,
+      "titulo": "Tranvía Metropolitano Besós Barcelona",
+      "ultimaActualizacion": "13/4/2026"
+    },
+    "1130": {
+      "id": 1130,
+      "titulo": "Autobús interurbano de Tenerife",
+      "ultimaActualizacion": "13/4/2026"
+    },
+    "1160": {
+      "id": 1160,
+      "titulo": "Autobuses interurbanos de la Comunidad de Madrid",
+      "ultimaActualizacion": "9/4/2026"
+    },
+    "1161": {
+      "id": 1161,
+      "titulo": "Alavabus",
+      "ultimaActualizacion": "14/4/2026"
+    },
+    "1162": {
+      "id": 1162,
+      "titulo": "Autobús de la isla de Menorca",
+      "ultimaActualizacion": "28/11/2025"
+    },
+    "1163": {
+      "id": 1163,
+      "titulo": "Autobús interurbano de Cataluña",
+      "ultimaActualizacion": "19/3/2026"
+    },
+    "1226": {
+      "id": 1226,
+      "titulo": "Metro Ligero y Tranvía Comunidad de Madrid",
+      "ultimaActualizacion": "9/4/2026"
+    },
+    "1259": {
+      "id": 1259,
+      "titulo": "Bilbobus",
+      "ultimaActualizacion": "14/4/2026"
+    },
+    "1292": {
+      "id": 1292,
+      "titulo": "Autobús urbano de Cáceres",
+      "ultimaActualizacion": "13/4/2026"
+    },
+    "1293": {
+      "id": 1293,
+      "titulo": "Autobús urbano de Málaga",
+      "ultimaActualizacion": "30/3/2026"
+    },
+    "1294": {
+      "id": 1294,
+      "titulo": "Autobús urbano de Palma de Mallorca",
+      "ultimaActualizacion": "16/3/2026"
+    },
+    "1295": {
+      "id": 1295,
+      "titulo": "Autobús metropolitano Barcelona",
+      "ultimaActualizacion": "13/4/2026"
+    },
+    "1296": {
+      "id": 1296,
+      "titulo": "Metro de Málaga",
+      "ultimaActualizacion": "18/3/2026"
+    },
+    "1325": {
+      "id": 1325,
+      "titulo": "Autobús interurbano Comunidad Valenciana",
+      "ultimaActualizacion": "14/4/2026"
+    },
+    "1326": {
+      "id": 1326,
+      "titulo": "Ferry Baleària",
+      "ultimaActualizacion": "3/2/2025"
+    },
+    "1327": {
+      "id": 1327,
+      "titulo": "Ferry Fred.Olsen",
+      "ultimaActualizacion": "13/4/2026"
+    },
+    "1362": {
+      "id": 1362,
+      "titulo": "Bus urbano de Segovia",
+      "ultimaActualizacion": "3/2/2025"
+    },
+    "1363": {
+      "id": 1363,
+      "titulo": "Autobús en Cantabria",
+      "ultimaActualizacion": "6/4/2026"
+    },
+    "1364": {
+      "id": 1364,
+      "titulo": "Autobus Madrid-Aranda de Duero-Burgo de Osma",
+      "ultimaActualizacion": "3/2/2025"
+    },
+    "1365": {
+      "id": 1365,
+      "titulo": "Transporte metropolitano Andalucía",
+      "ultimaActualizacion": "13/4/2026"
+    },
+    "1366": {
+      "id": 1366,
+      "titulo": "Autobús urbano de Valladolid",
+      "ultimaActualizacion": "13/4/2026"
+    },
+    "1367": {
+      "id": 1367,
+      "titulo": "Autobús urbano de Granada",
+      "ultimaActualizacion": "20/1/2026"
+    },
+    "1368": {
+      "id": 1368,
+      "titulo": "Autobuses urbanos de San Vicente del Raspeig",
+      "ultimaActualizacion": "3/2/2025"
+    },
+    "1369": {
+      "id": 1369,
+      "titulo": "Autobús y tranvía de Sevilla",
+      "ultimaActualizacion": "31/3/2026"
+    },
+    "1370": {
+      "id": 1370,
+      "titulo": "Metro de Granada",
+      "ultimaActualizacion": "18/3/2026"
+    },
+    "1371": {
+      "id": 1371,
+      "titulo": "Tranvía de Murcia",
+      "ultimaActualizacion": "13/4/2026"
+    },
+    "1372": {
+      "id": 1372,
+      "titulo": "Autobús urbano de Girona",
+      "ultimaActualizacion": "25/2/2026"
+    },
+    "1373": {
+      "id": 1373,
+      "titulo": "Ferrocarriles de la Generalitat de Cataluña",
+      "ultimaActualizacion": "8/4/2026"
+    },
+    "1374": {
+      "id": 1374,
+      "titulo": "Autobús urbano de Castellón de la Plana",
+      "ultimaActualizacion": "25/3/2026"
+    },
+    "1375": {
+      "id": 1375,
+      "titulo": "Autobús urbano de Córdoba",
+      "ultimaActualizacion": "25/2/2026"
+    },
+    "1376": {
+      "id": 1376,
+      "titulo": "Autobús urbano de la Coruña",
+      "ultimaActualizacion": "12/12/2025"
+    },
+    "1377": {
+      "id": 1377,
+      "titulo": "Unauto",
+      "ultimaActualizacion": "13/4/2026"
+    },
+    "1378": {
+      "id": 1378,
+      "titulo": "Sarfa autobuses",
+      "ultimaActualizacion": "10/4/2026"
+    },
+    "1379": {
+      "id": 1379,
+      "titulo": "Pujol autobuses",
+      "ultimaActualizacion": "31/3/2026"
+    },
+    "1380": {
+      "id": 1380,
+      "titulo": "Autobuses Empresa Casas",
+      "ultimaActualizacion": "10/4/2026"
+    },
+    "1381": {
+      "id": 1381,
+      "titulo": "Autobusos de Lleida",
+      "ultimaActualizacion": "31/3/2026"
+    },
+    "1382": {
+      "id": 1382,
+      "titulo": "Autobuses TCC Barcelona",
+      "ultimaActualizacion": "10/4/2026"
+    },
+    "1383": {
+      "id": 1383,
+      "titulo": "Autobuses Sarbus – La Vallesana",
+      "ultimaActualizacion": "13/4/2026"
+    },
+    "1384": {
+      "id": 1384,
+      "titulo": "Autobuses Urbanos Dos Hermanas",
+      "ultimaActualizacion": "29/12/2025"
+    },
+    "1385": {
+      "id": 1385,
+      "titulo": "Metro de Sevilla",
+      "ultimaActualizacion": "11/12/2025"
+    },
+    "1386": {
+      "id": 1386,
+      "titulo": "Autobuses Xunta de Galicia",
+      "ultimaActualizacion": "10/4/2026"
+    },
+    "1387": {
+      "id": 1387,
+      "titulo": "Autobús urbano de Ourense",
+      "ultimaActualizacion": "3/2/2025"
+    },
+    "1388": {
+      "id": 1388,
+      "titulo": "Transportes de Murcia",
+      "ultimaActualizacion": "13/4/2026"
+    },
+    "1389": {
+      "id": 1389,
+      "titulo": "Salamanca de Transportes S.A.",
+      "ultimaActualizacion": "13/4/2026"
+    },
+    "1390": {
+      "id": 1390,
+      "titulo": "Autobuses Urbanos de AISA. Ciudad Real y Seseña",
+      "ultimaActualizacion": "13/4/2026"
+    },
+    "1391": {
+      "id": 1391,
+      "titulo": "Transportes Urbanos de Santander",
+      "ultimaActualizacion": "23/12/2025"
+    },
+    "1392": {
+      "id": 1392,
+      "titulo": "Autobuses urbanos de Alicante",
+      "ultimaActualizacion": "13/4/2026"
+    },
+    "1393": {
+      "id": 1393,
+      "titulo": "Lurraldebus TBH (Interurbano Tolosa Buruntzaldea)",
+      "ultimaActualizacion": "7/4/2026"
+    },
+    "1394": {
+      "id": 1394,
+      "titulo": "Tranvía de Zaragoza",
+      "ultimaActualizacion": "6/3/2025"
+    },
+    "1395": {
+      "id": 1395,
+      "titulo": "Metrotenerife",
+      "ultimaActualizacion": "5/3/2025"
+    },
+    "1396": {
+      "id": 1396,
+      "titulo": "EMT Tarragona",
+      "ultimaActualizacion": "10/4/2026"
+    },
+    "1397": {
+      "id": 1397,
+      "titulo": "Autobús urbano de Fuengirola",
+      "ultimaActualizacion": "4/2/2026"
+    },
+    "1398": {
+      "id": 1398,
+      "titulo": "VAC-231. Madrid, Piedrabuena (Ciudad Real) y Agudo (Ciudad Real)",
+      "ultimaActualizacion": "3/2/2025"
+    },
+    "1399": {
+      "id": 1399,
+      "titulo": "VAC-245. Huesca-Barcelona",
+      "ultimaActualizacion": "3/2/2025"
+    },
+    "1400": {
+      "id": 1400,
+      "titulo": "VAC-124. Huesca-Lleida con hijuelas",
+      "ultimaActualizacion": "3/2/2025"
+    },
+    "1515": {
+      "id": 1515,
+      "titulo": "Ouigo",
+      "ultimaActualizacion": "10/4/2026"
+    },
+    "1516": {
+      "id": 1516,
+      "titulo": "Autobuses Junta de Extremadura",
+      "ultimaActualizacion": "18/7/2025"
+    },
+    "1517": {
+      "id": 1517,
+      "titulo": "Reus Transport",
+      "ultimaActualizacion": "21/2/2025"
+    },
+    "1518": {
+      "id": 1518,
+      "titulo": "Autocares Rías Baixas",
+      "ultimaActualizacion": "9/4/2026"
+    },
+    "1519": {
+      "id": 1519,
+      "titulo": "Autobús urbano de Pinto",
+      "ultimaActualizacion": "3/2/2025"
+    },
+    "1520": {
+      "id": 1520,
+      "titulo": "Autobuses del Área de la Serranía de Albarracín con Teruel (C10)",
+      "ultimaActualizacion": "3/2/2025"
+    },
+    "1521": {
+      "id": 1521,
+      "titulo": "Autobuses del Área del campo de Belchite con Zaragoza (C12)",
+      "ultimaActualizacion": "3/2/2025"
+    },
+    "1522": {
+      "id": 1522,
+      "titulo": "Eixbus, S.A.",
+      "ultimaActualizacion": "31/12/2025"
+    },
+    "1523": {
+      "id": 1523,
+      "titulo": "Direxis Masats",
+      "ultimaActualizacion": "16/3/2026"
+    },
+    "1524": {
+      "id": 1524,
+      "titulo": "Direxis TGO",
+      "ultimaActualizacion": "16/3/2026"
+    },
+    "1525": {
+      "id": 1525,
+      "titulo": "Cots Alsina",
+      "ultimaActualizacion": "3/2/2025"
+    },
+    "1526": {
+      "id": 1526,
+      "titulo": "Autocares Rafael Nadal",
+      "ultimaActualizacion": "4/2/2026"
+    },
+    "1535": {
+      "id": 1535,
+      "titulo": "Autobuses y trenes en Cataluña (versión simplificada)",
+      "ultimaActualizacion": "13/4/2026"
+    },
+    "1536": {
+      "id": 1536,
+      "titulo": "Autobuses y trenes en Cataluña (versión completa)",
+      "ultimaActualizacion": "13/4/2026"
+    },
+    "1537": {
+      "id": 1537,
+      "titulo": "Lejoan busa",
+      "ultimaActualizacion": "30/5/2025"
+    },
+    "1538": {
+      "id": 1538,
+      "titulo": "Urbano de Oñati (Oñatiko herribusa)",
+      "ultimaActualizacion": "13/4/2026"
+    },
+    "1539": {
+      "id": 1539,
+      "titulo": "Bermibusa",
+      "ultimaActualizacion": "14/1/2026"
+    },
+    "1540": {
+      "id": 1540,
+      "titulo": "Sopelbus",
+      "ultimaActualizacion": "14/1/2026"
+    },
+    "1541": {
+      "id": 1541,
+      "titulo": "Etxebarribus",
+      "ultimaActualizacion": "30/5/2025"
+    },
+    "1542": {
+      "id": 1542,
+      "titulo": "Erandio! Busa",
+      "ultimaActualizacion": "14/1/2026"
+    },
+    "1543": {
+      "id": 1543,
+      "titulo": "Urbano de Tolosa",
+      "ultimaActualizacion": "13/4/2026"
+    },
+    "1544": {
+      "id": 1544,
+      "titulo": "Kbus (urbano de Barakaldo)",
+      "ultimaActualizacion": "30/5/2025"
+    },
+    "1545": {
+      "id": 1545,
+      "titulo": "Autocares Costa",
+      "ultimaActualizacion": "30/6/2025"
+    },
+    "1546": {
+      "id": 1546,
+      "titulo": "Autocares Álvarez de Viajeros",
+      "ultimaActualizacion": "30/5/2025"
+    },
+    "1547": {
+      "id": 1547,
+      "titulo": "Ancebus",
+      "ultimaActualizacion": "23/5/2025"
+    },
+    "1548": {
+      "id": 1548,
+      "titulo": "Autocares Lázara",
+      "ultimaActualizacion": "29/5/2025"
+    },
+    "1549": {
+      "id": 1549,
+      "titulo": "Viagón Autocares",
+      "ultimaActualizacion": "4/2/2026"
+    },
+    "1550": {
+      "id": 1550,
+      "titulo": "Rodil",
+      "ultimaActualizacion": "9/3/2026"
+    },
+    "1551": {
+      "id": 1551,
+      "titulo": "Taxitur",
+      "ultimaActualizacion": "16/9/2025"
+    },
+    "1552": {
+      "id": 1552,
+      "titulo": "Autocares Medina",
+      "ultimaActualizacion": "16/9/2025"
+    },
+    "1553": {
+      "id": 1553,
+      "titulo": "Transporte Interurbano del Gobierno de La Rioja",
+      "ultimaActualizacion": "23/3/2026"
+    },
+    "1554": {
+      "id": 1554,
+      "titulo": "Transporte Metropolitano del Gobierno de La Rioja",
+      "ultimaActualizacion": "23/3/2026"
+    },
+    "1555": {
+      "id": 1555,
+      "titulo": "Pérez Cubero",
+      "ultimaActualizacion": "20/3/2026"
+    },
+    "1556": {
+      "id": 1556,
+      "titulo": "Transporte Rural del Gobierno de La Rioja",
+      "ultimaActualizacion": "10/3/2026"
+    },
+    "1557": {
+      "id": 1557,
+      "titulo": "Autocares Galán Gómez",
+      "ultimaActualizacion": "29/10/2025"
+    },
+    "1558": {
+      "id": 1558,
+      "titulo": "Autocares J Cristeto",
+      "ultimaActualizacion": "19/11/2025"
+    },
+    "1559": {
+      "id": 1559,
+      "titulo": "Autobús urbano de Aranda de Duero",
+      "ultimaActualizacion": "13/4/2026"
+    },
+    "1592": {
+      "id": 1592,
+      "titulo": "Autobuses Cinco Villas",
+      "ultimaActualizacion": "12/3/2026"
+    },
+    "1593": {
+      "id": 1593,
+      "titulo": "La Hispano del Cid, S.A. (HICID)",
+      "ultimaActualizacion": "23/3/2026"
+    },
+    "1626": {
+      "id": 1626,
+      "titulo": "Autobús urbano de Burgos",
+      "ultimaActualizacion": "6/4/2026"
+    },
+    "1627": {
+      "id": 1627,
+      "titulo": "Arroyobus",
+      "ultimaActualizacion": "13/4/2026"
+    }
+  }
+}
